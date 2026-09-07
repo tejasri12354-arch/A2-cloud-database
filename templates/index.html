@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+
+{% block title %}CloudDB Secure - Cloud Database Maintenance{% endblock %}
+
+{% block content %}
+<section class="hero-section">
+    <div class="container">
+        <h1 class="hero-title">
+            <i class="fas fa-cloud-upload-alt"></i>
+            Cloud Database Maintenance
+        </h1>
+        <p class="hero-subtitle">
+            Secure fee collection and complaint handling system with end-to-end encryption. 
+            Manage your cloud database with confidence using PKCS1_OAEP encryption.
+        </p>
+        <div class="hero-buttons">
+            <a href="{{ url_for('auth.signup') }}" class="btn btn-primary">
+                <i class="fas fa-rocket"></i> Get Started
+            </a>
+            <a href="{{ url_for('auth.login') }}" class="btn btn-secondary">
+                <i class="fas fa-sign-in-alt"></i> Login
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="features-grid">
+    <div class="feature-card">
+        <div class="feature-icon">
+            <i class="fas fa-shield-alt"></i>
+        </div>
+        <h3 class="feature-title">Secure Encryption</h3>
+        <p class="feature-description">
+            All files are encrypted using PKCS1_OAEP with hybrid RSA-AES encryption for maximum security.
+        </p>
+    </div>
+    
+    <div class="feature-card">
+        <div class="feature-icon">
+            <i class="fas fa-users-cog"></i>
+        </div>
+        <h3 class="feature-title">Role-Based Access</h3>
+        <p class="feature-description">
+            Three-tier access system with Administrator, Database Management, and User roles.
+        </p>
+    </div>
+    
+    <div class="feature-card">
+        <div class="feature-icon">
+            <i class="fas fa-exchange-alt"></i>
+        </div>
+        <h3 class="feature-title">Secure File Transfer</h3>
+        <p class="feature-description">
+            Transfer files securely between cloud, database management, and users with encryption.
+        </p>
+    </div>
+    
+    <div class="feature-card">
+        <div class="feature-icon">
+            <i class="fas fa-credit-card"></i>
+        </div>
+        <h3 class="feature-title">Fee Collection</h3>
+        <p class="feature-description">
+            Streamlined maintenance fee collection with payment tracking and history.
+        </p>
+    </div>
+    
+    <div class="feature-card">
+        <div class="feature-icon">
+            <i class="fas fa-headset"></i>
+        </div>
+        <h3 class="feature-title">Complaint Handling</h3>
+        <p class="feature-description">
+            Submit and track complaints with priority levels and admin responses.
+        </p>
+    </div>
+    
+    <div class="feature-card">
+        <div class="feature-icon">
+            <i class="fas fa-key"></i>
+        </div>
+        <h3 class="feature-title">Secret Sharing</h3>
+        <p class="feature-description">
+            Share sensitive information securely between different roles in the system.
+        </p>
+    </div>
+</section>
+
+<section style="padding: 60px 20px; background: linear-gradient(135deg, var(--pink-50) 0%, var(--bg-primary) 100%);">
+    <div class="container" style="text-align: center;">
+        <h2 style="font-size: 2rem; margin-bottom: 20px; color: var(--text-primary);">
+            <i class="fas fa-lock" style="color: var(--pink-500);"></i>
+            Powered by PKCS1_OAEP Encryption
+        </h2>
+        <p style="max-width: 700px; margin: 0 auto; color: var(--text-secondary); line-height: 1.8;">
+            Our system uses industry-standard PKCS1_OAEP (Optimal Asymmetric Encryption Padding) with RSA 
+            combined with AES-256 for hybrid encryption. This ensures your files remain secure during 
+            transfer and storage, with each user having their own unique key pair.
+        </p>
+    </div>
+</section>
+{% endblock %}

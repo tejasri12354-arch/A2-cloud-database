@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<aside class="sidebar">
+    <div style="margin-bottom: 24px; padding: 16px; background: var(--pink-50); border-radius: 12px;">
+        <div style="display: flex; align-items: center; gap: 12px;">
+            <div style="width: 48px; height: 48px; background: var(--pink-200); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <i class="fas fa-user" style="color: var(--pink-600);"></i>
+            </div>
+            <div>
+                <div style="font-weight: 600;">{{ current_user.username }}</div>
+                <div class="role-badge {{ current_user.role }}" style="font-size: 0.7rem; padding: 2px 8px;">
+                    {{ current_user.role }}
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <ul class="sidebar-menu">
+        {% block sidebar %}{% endblock %}
+    </ul>
+</aside>
+
+<main class="main-content">
+    {% block main %}{% endblock %}
+</main>
+{% endblock %}
