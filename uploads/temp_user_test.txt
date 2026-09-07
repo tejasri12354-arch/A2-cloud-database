@@ -1,0 +1,2 @@
+This is a test file for cloudDB secure.
+File upload and encryption testing
