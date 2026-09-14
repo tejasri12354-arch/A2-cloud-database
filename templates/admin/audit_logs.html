@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Audit Logs</title>
+</head>
+
+<body>
+
+    <h1>Audit Logs</h1>
+
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>User</th>
+            <th>Action</th>
+            <th>Date & Time</th>
+        </tr>
+
+        {% for log in logs %}
+        <tr>
+            <td>
+                {{ log.get('username', log.get('user', log.get('email', 'Unknown'))) }}
+            </td>
+
+            <td>
+                {{ log.get('action', 'Unknown') }}
+            </td>
+
+            <td>
+                {{ log.get('created_at', log.get('timestamp', log.get('date_time', 'Not Available'))) }}
+            </td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+</body>
+</html>
