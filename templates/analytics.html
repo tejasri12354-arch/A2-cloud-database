@@ -24,7 +24,7 @@
             <i class="fas fa-lock" style="color: #059669;"></i>
         </div>
         <div class="stat-content">
-            <h3>{{ stats.files_by_type.encrypted }}</h3>
+            <h3>{{ stats.encrypted }}</h3>
             <p>Encrypted Files</p>
         </div>
     </div>
@@ -34,8 +34,8 @@
             <i class="fas fa-unlock" style="color: #D97706;"></i>
         </div>
         <div class="stat-content">
-            <h3>{{ stats.files_by_type.unencrypted }}</h3>
-            <p>Unencrypted Files</p>
+            <h3>{{ stats.files_by_type.decrypted }}</h3>
+            <p>decrypted Files</p>
         </div>
     </div>
     
@@ -62,17 +62,17 @@
                     <span style="font-weight: 600;">{{ stats.files_by_type.encrypted }}</span>
                 </div>
                 <div class="progress-bar">
-                    <div class="progress-fill" style="width: {% if stats.files_by_type.encrypted + stats.files_by_type.unencrypted > 0 %}{{ (stats.files_by_type.encrypted / (stats.files_by_type.encrypted + stats.files_by_type.unencrypted) * 100)|int }}%{% else %}0%{% endif %}; background: #4ADE80;"></div>
+                    <div class="progress-fill" style="width: {% if stats.files_by_type.encrypted + stats.files_by_type.decrypted > 0 %}{{ (stats.files_by_type.encrypted / (stats.files_by_type.encrypted + stats.files_by_type.decrypted) * 100)|int }}%{% else %}0%{% endif %}; background: #4ADE80;"></div>
                 </div>
             </div>
             
             <div>
                 <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
-                    <span><i class="fas fa-unlock" style="color: #D97706;"></i> Unencrypted</span>
-                    <span style="font-weight: 600;">{{ stats.files_by_type.unencrypted }}</span>
+                    <span><i class="fas fa-unlock" style="color: #D97706;"></i> decrypted</span>
+                    <span style="font-weight: 600;">{{ stats.files_by_type.decrypted }}</span>
                 </div>
                 <div class="progress-bar">
-                    <div class="progress-fill" style="width: {% if stats.files_by_type.encrypted + stats.files_by_type.unencrypted > 0 %}{{ (stats.files_by_type.unencrypted / (stats.files_by_type.encrypted + stats.files_by_type.unencrypted) * 100)|int }}%{% else %}0%{% endif %}; background: #FBBF24;"></div>
+                    <div class="progress-fill" style="width: {% if stats.files_by_type.encrypted + stats.files_by_type.decrypted > 0 %}{{ (stats.files_by_type.decrypted / (stats.files_by_type.encrypted + stats.files_by_type.decrypted) * 100)|int }}%{% else %}0%{% endif %}; background: #FBBF24;"></div>
                 </div>
             </div>
         </div>
