@@ -1,0 +1,86 @@
+{% extends "dashboard_base.html" %}
+
+{% block title %}Admin Dashboard - CloudDB Secure{% endblock %}
+
+{% block sidebar %}
+
+<li>
+    <a href="{{ url_for('admin.dashboard') }}">
+        <i class="fas fa-home"></i> Dashboard
+    </a>
+</li>
+
+<li>
+    <a href="{{ url_for('admin.user_management') }}">
+        <i class="fas fa-users"></i> User Management
+    </a>
+</li>
+
+<li>
+    <a href="/admin/payments">
+        <i class="fas fa-money-bill-wave"></i> Fee Configuration
+    </a>
+</li>
+
+<li>
+    <a href="/admin/complaints">
+        <i class="fas fa-clipboard-list"></i> Complaint Review
+    </a>
+</li>
+
+<li>
+    <a href="/admin/analytics">
+        <i class="fas fa-chart-bar"></i> System Reports
+    </a>
+</li>
+
+<li>
+    <a href="/admin/audit-logs">
+        <i class="fas fa-history"></i> Audit Logs
+    </a>
+</li>
+
+<li>
+    <a href="/admin/secrets">
+        <i class="fas fa-key"></i> Secret Sharing
+    </a>
+</li>
+
+{% endblock %}
+
+{% block main %}
+
+<div class="page-header">
+    <h1>
+        <i class="fas fa-user-shield"></i>
+        Admin Dashboard
+    </h1>
+
+    <p>Welcome to CloudDB Secure Administration</p>
+</div>
+
+<div class="stats-grid">
+
+    <div class="stat-card">
+        <h3>Total Users</h3>
+        <p>{{ stats.total_users }}</p>
+    </div>
+
+    <div class="stat-card">
+        <h3>Total Payments</h3>
+        <p>{{ stats.total_payments }}</p>
+    </div>
+
+    <div class="stat-card">
+        <h3>Total Revenue</h3>
+        <p>₹{{ stats.total_spent }}</p>
+    </div>
+
+    <div class="stat-card">
+        <h3>Pending Complaints</h3>
+        <p>{{ stats.pending_complaints }}</p>
+    </div>
+
+</div>
+
+{% endblock %}
