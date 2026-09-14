@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% block title %}Sign Up - CloudDB Secure{% endblock %}
+
+{% block content %}
+<div class="auth-container">
+    <div class="auth-card" style="max-width: 560px;">
+        <div class="auth-header">
+            <div style="width: 80px; height: 80px; background: var(--pink-100); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                <i class="fas fa-user-plus" style="font-size: 2rem; color: var(--pink-500);"></i>
+            </div>
+            <h1 class="auth-title">Create Account</h1>
+            <p class="auth-subtitle">Join our secure cloud database system</p>
+        </div>
+        
+        <form method="POST" action="{{ url_for('auth.signup') }}">
+            <div class="grid-2">
+                <div class="form-group">
+                    <label class="form-label" for="username">
+                        <i class="fas fa-user"></i> Username *
+                    </label>
+                    <input type="text" id="username" name="username" class="form-control" required placeholder="Choose username">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="email">
+                        <i class="fas fa-envelope"></i> Email *
+                    </label>
+                    <input type="email" id="email" name="email" class="form-control" required placeholder="your@email.com">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label" for="full_name">
+                    <i class="fas fa-id-card"></i> Full Name
+                </label>
+                <input type="text" id="full_name" name="full_name" class="form-control" placeholder="Enter your full name">
+            </div>
+            
+            <div class="grid-2">
+                <div class="form-group">
+                    <label class="form-label" for="phone">
+                        <i class="fas fa-phone"></i> Phone
+                    </label>
+                    <input type="tel" id="phone" name="phone" class="form-control" placeholder="Phone number">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="address">
+                        <i class="fas fa-map-marker-alt"></i> Address
+                    </label>
+                    <input type="text" id="address" name="address" class="form-control" placeholder="Your address">
+                </div>
+            </div>
+            
+            <div class="grid-2">
+                <div class="form-group">
+                    <label class="form-label" for="password">
+                        <i class="fas fa-lock"></i> Password *
+                    </label>
+                    <input type="password" id="password" name="password" class="form-control" required placeholder="Min 6 characters">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="confirm_password">
+                        <i class="fas fa-lock"></i> Confirm Password *
+                    </label>
+                    <input type="password" id="confirm_password" name="confirm_password" class="form-control" required placeholder="Repeat password">
+                </div>
+            </div>
+            
+            <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                <i class="fas fa-user-plus"></i> Create Account
+            </button>
+        </form>
+        
+        <div class="auth-footer">
+            <p>Already have an account? <a href="{{ url_for('auth.login') }}">Sign in</a></p>
+        </div>
+    </div>
+</div>
+{% endblock %}
