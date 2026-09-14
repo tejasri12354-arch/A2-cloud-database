@@ -1,4 +1,4 @@
-I checked your ZIP project. It is a Flask-based Cloud Database Maintenance Fee Collection system with Admin, Database Manager, and User modules, TinyDB database, file management, complaints, fee/payment management, audit logs, and encryption.
+ It is a Flask-based Cloud Database Maintenance Fee Collection system with Admin, Database Manager, and User modules, TinyDB database, file management, complaints, fee/payment management, audit logs, and encryption.
 
 Here is a GitHub-ready README.md you can copy directly:
 
